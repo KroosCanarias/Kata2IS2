@@ -14,7 +14,7 @@ public class Kata2 {
             }
         }
         HashMap <Integer,Integer> histogram=new HashMap<>();
-        for(Integer i: data){
+        for(int i: data){
             if(histogram.containsKey(i)){
                 histogram.put(data[i],histogram.get(data[i])+1);
             }else{
