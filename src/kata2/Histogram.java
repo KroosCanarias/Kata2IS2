@@ -1,7 +1,6 @@
 package kata2;
 
 import java.util.*;
-
 public class Histogram<T> {
     private final T []data;
     public Histogram(T[] data){
