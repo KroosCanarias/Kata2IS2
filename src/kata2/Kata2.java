@@ -5,7 +5,7 @@ import java.util.*;
 public class Kata2 {
 
     public static void main(String[] args) {
-        int [] data=new int[15];
+        Integer [] data=new Integer[15];
         for(int i=0;i<15;i++){
             if(i%2==0){
                 data[i]=2;
