@@ -2,22 +2,18 @@ package kata2;
 
 import java.util.*;
 
-public class Histogram {
-    private final int []data;
-    public Histogram(int[] data){
+public class Histogram<T> {
+    private final T []data;
+    public Histogram(T[] data){
         this.data=data;
     }
-    public int [] getData(){
+    public T [] getData(){
         return data;
     }
-    public Map<Integer,Integer> getHistogram(){
-        Map<Integer,Integer> hist=new HashMap<>();
-        for(int i: data){
-            if(hist.containsKey(i)){
-                hist.put(data[i],hist.get(data[i])+1);
-            }else{
-                hist.put(data[i],1);
-            }
+    public Map<T,Integer> getHistogram(){
+        Map<T,Integer> hist=new HashMap<>();
+        for(T i: data){
+            hist.put(i,hist.containsKey(i) ? hist.get(i) + 1 : 1);
         }
         return hist;
     }
